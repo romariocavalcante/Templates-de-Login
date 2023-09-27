@@ -1,0 +1,108 @@
+// reset css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// container principal para centralizar os componentes
+main {
+    flex-direction: column;
+
+    // container do login
+    .container-login {
+        position: relative;
+        width: 400px;
+        height: 400px;
+
+        // aplicando o tamanho da div para a imagem do usuário
+        .img-user-size {
+            width: 20px;
+            height: 20px;
+        }
+
+        // posicionando a div da imagem de usuário
+        .margin-1 {
+            margin-top: -50px;
+        }
+
+        // atribuindo espaço interno a div que abriga os itens 'user log in' e o formulário
+        .content {
+            padding-top: 70px;
+            padding-left: 30px !important;
+            padding-right: 30px !important;
+
+            // personalizando os campos do formulário
+            form {
+                div:nth-child(-n+2) {
+                    // removendo a borda quando clica no formulário
+                    input {
+                        outline: none;
+                    }
+                    // comportamento do campo quando é selecionado
+                    input:focus {
+                        background-color: rgb(255, 255, 255) !important;
+                        box-shadow: 0 .2rem 1rem rgba(black, .15);
+                    }
+                }
+            }
+        }
+    }
+
+    // apagar esse trecho junto com a parte sinalizada no html
+    // ------------------------------------
+    footer {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+
+        div {
+            padding: 50px 0px;
+        }
+    }
+    // ------------------------------------
+
+}
+
+// Mobile
+// visão de login através do celular
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 0px 30px !important;
+        align-items: start !important;
+        flex-direction: row !important;
+        .container-login {
+            margin-bottom: 150px !important;
+        }
+    }
+}
+
+@media only screen and (min-width:601px) and (max-width: 900px) {
+    main {
+        padding: 10px 30px !important;
+        align-items: start !important;
+        flex-direction: column !important;
+        .container-login {
+            width: 45%;
+            margin-top: 30%;
+            .img-user-size {
+                width: 10px !important;
+                height:10px !important;
+                padding: 35px !important;
+
+                .fa-user {
+                    font-size: 30px !important;
+                }
+            }
+            .margin-1 {
+                margin-top: -40px;
+            }
+    
+        }
+        footer {
+            position: initial;
+        }
+    }
+}

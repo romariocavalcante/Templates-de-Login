@@ -1,0 +1,79 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  flex-direction: column;
+}
+main .container-login {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+main .container-login .img-user-size {
+  width: 20px;
+  height: 20px;
+}
+main .container-login .margin-1 {
+  margin-top: -50px;
+}
+main .container-login .content {
+  padding-top: 70px;
+  padding-left: 30px !important;
+  padding-right: 30px !important;
+}
+main .container-login .content form div:nth-child(-n+2) input {
+  outline: none;
+}
+main .container-login .content form div:nth-child(-n+2) input:focus {
+  background-color: rgb(255, 255, 255) !important;
+  box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.15);
+}
+main footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+main footer div {
+  padding: 50px 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  main {
+    padding: 0px 30px !important;
+    align-items: start !important;
+    flex-direction: row !important;
+  }
+  main .container-login {
+    margin-bottom: 150px !important;
+  }
+}
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  main {
+    padding: 10px 30px !important;
+    align-items: start !important;
+    flex-direction: column !important;
+  }
+  main .container-login {
+    width: 45%;
+    margin-top: 30%;
+  }
+  main .container-login .img-user-size {
+    width: 10px !important;
+    height: 10px !important;
+    padding: 35px !important;
+  }
+  main .container-login .img-user-size .fa-user {
+    font-size: 30px !important;
+  }
+  main .container-login .margin-1 {
+    margin-top: -40px;
+  }
+  main footer {
+    position: initial;
+  }
+}/*# sourceMappingURL=login.css.map */
